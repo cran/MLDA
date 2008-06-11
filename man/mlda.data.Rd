@@ -3,10 +3,11 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ Generate a data set in mlda }
 \description{
-  A function to generate a dataset object in mlda
+  A function to generate a dataset object in MLDA
 }
 \usage{
-mlda.data(dig1, undig1, dig2, undig2, unmeth.flag, cl, sample.names = NULL, flag1 = NULL, flag2 = NULL)
+mlda.data(dig1, undig1, dig2, undig2, unmeth.flag, cl, sample.names = NULL, 
+					flag1 = NULL, flag2 = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -39,7 +40,12 @@ mlda.data(dig1, undig1, dig2, undig2, unmeth.flag, cl, sample.names = NULL, flag
 
 \examples{
 
-		data(hcgi12k)
-		i<-c(1,5)
-		dataset<-mlda.data(dig1=hcgi12k$G[,i],undig1=hcgi12k$R[,i],dig2=hcgi12k$Rds[,i],undig2=hcgi12k$Gds[,i],unmeth.flag=hcgi12k$mito.flag,cl=hcgi12k$cl[i],sample.names=hcgi12k$sample.names[i],flag1=hcgi12k$flag[,i],flag2=hcgi12k$flagds[,i])
+data(hcgi12k)
+i<-c(1,5)
+dataset<-mlda.data(dig1=hcgi12k$G[,i],undig1=hcgi12k$R[,i],
+dig2=hcgi12k$Rds[,i],undig2=hcgi12k$Gds[,i],
+unmeth.flag=hcgi12k$mito.flag,cl=hcgi12k$cl[i],
+sample.names=hcgi12k$sample.names[i],
+flag1=hcgi12k$flag[,i],flag2=hcgi12k$flagds[,i])
+		
 }

@@ -26,9 +26,9 @@ list.compare(list1, list2)
 
 \examples{
 
-			list1<-paste("gene",1:8)
-			list2<-paste("gene",6:12)
-			result<-list.compare(list1,list2)
-			overlap<-list2[result]
+list1<-paste("gene",1:8)
+list2<-paste("gene",6:12)
+result<-list.compare(list1,list2)
+overlap<-list2[result]
 
 }

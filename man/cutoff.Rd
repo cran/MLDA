@@ -7,7 +7,8 @@
 }
 
 \usage{
-cutoff(dataset, mlda.obj, IR = 0.01, CR = 1.4, ncut = 30, unmeth.start = 1, meth.start = 1)
+cutoff(dataset, mlda.obj, IR = 0.01, CR = 1.4, ncut = 30, 
+			unmeth.start = 1, meth.start = 1)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -22,7 +23,7 @@ cutoff(dataset, mlda.obj, IR = 0.01, CR = 1.4, ncut = 30, unmeth.start = 1, meth
 }
 \details{
 
-  Two inconsistency rates (IRmeth and IRunmeth) and two consistency rate (CRmeth and CRunmeth) between
+  Two inconsistency rates(IRmeth and IRunmeth) and two consistency rates(CRmeth and CRunmeth) between
   dye-swapped/duplicated arrays were used to determine the log likelihood ratio cut-offs. IRmeth represents
   the rate of the microarray features identified as methylated in one array but as unmethylated in the other
   one, while IRunmeth is the rate of the microarray features identified as unmethylated in one array but as methylated

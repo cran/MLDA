@@ -34,19 +34,19 @@ score.cal(mlda.obj, cutoff.obj, mlda.data, perm = 200, control = NULL)
 	are scored of 1; similarly unmethylated features were scored of -1. The rest of the feature were assigned a weighted score based on their location
 	on the plot (see \code{\link{lr.plot}}).
 	
-	Score scheme:
+	Score scheme:\cr
 	
-	f(i,j)=1  i>a and j>a
-	f(i,j)=-1 i>b and j>b
-	f(i,j)=0.45 (i>a and 0<j<a) or (0<i<a and j>a)
-	f(i,j)=-0.45 (i<b and b<j<0) or (b<i<0 and j<b)
-	f(i,j)=0.2 (0<i<a and 0<j<a) or (b<i<0 and b<j<0)
-	f(i,j)=0.0001 (0<i<a and b<j<0) or (b<i<0 and 0<j<a)
+	f ( i, j ) = 1  i > a and j > a\cr
+	f ( i, j ) = -1 i > b and j > b\cr
+	f ( i, j ) = 0.45 ( i > a and 0 < j < a ) or ( 0 < i < a and j > a )\cr
+	f ( i, j ) = -0.45 ( i < b and b < j < 0 ) or ( b < i < 0 and j < b )\cr
+	f ( i, j ) = 0.2 ( 0 < i < a and 0 < j < a ) or ( b < i < 0 and b < j < 0 )\cr
+	f ( i, j ) = 0.0001 ( 0 < i < a and b < j < 0 ) or ( b < i < 0 and 0 < j < a )\cr
 	
-	otherwise f(i,j)=0
+	otherwise,  f( i, j ) = 0\cr\cr
 	
-	a: methylation cut-off
-	b: unmethylation cut-off
+	a: methylation cut-off\cr
+	b: unmethylation cut-off\cr
 	
 }
 \author{ Wei Dai \email{w.dai@imperial.ac.uk} }

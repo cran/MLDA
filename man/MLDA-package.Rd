@@ -25,9 +25,9 @@ Methylation Linear Discriminant Analysis (MLDA)
 \tabular{ll}{
 Package: \tab MLDA\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2008-06-10\cr
-License: \tab GPL (version 2 or later) \cr
+Version: \tab 1.0-1\cr
+Date: \tab 2008-06-11\cr
+License: \tab GPL (>= 2) \cr
 Depends: \tab R (>= 2.7.0)\cr
 LazyLoad: \tab yes\cr
 }
@@ -48,25 +48,29 @@ data(hcgi12k)
 i<-c(1,2,5,6)
 
 ##construct dataset
-dataset<-mlda.data(dig1=hcgi12k$G[,i],undig1=hcgi12k$R[,i],dig2=hcgi12k$Rds[,i],undig2=hcgi12k$Gds[,i],unmeth.flag=hcgi12k$mito.flag,cl=hcgi12k$cl[i],sample.names=hcgi12k$sample.names[i],flag1=hcgi12k$flag[,i],flag2=hcgi12k$flagds[,i])
+dataset<-mlda.data(dig1=hcgi12k$G[,i],undig1=hcgi12k$R[,i],dig2=hcgi12k$Rds[,i],
+undig2=hcgi12k$Gds[,i],unmeth.flag=hcgi12k$mito.flag,cl=hcgi12k$cl[i],
+sample.names=hcgi12k$sample.names[i],flag1=hcgi12k$flag[,i],flag2=hcgi12k$flagds[,i])
 
 ##Transform the log ratios of features to log likelihood ratios
 mlda.result<-mlda(dataset,norm=FALSE,trim=0.05)
 
-##Determie the cut-offs of log likelihood ratios for methylation and unmethylation on dye-swapped/duplicate arrays
+##Determie the cut-offs of log likelihood ratios for methylation and unmethylation 
+##on dye-swapped/duplicate arrays
 mytest<-cutoff(dataset,mlda.result,ncut=10)
 
 ##Select the optimal IR and CR             
 cutoff.plot(dataset,mytest)
 
-##Score the features and construct the robust regression model usig the averaged scores in two classes of samples
-##Determied the outliers (positive and negative) of the model    
+##Score the features and construct the robust regression model using the averaged 
+##scores in two classes of samples.
+##Determied the outliers (positive and negative) of the model.    
 myscore<-score.cal(mlda.result,mytest,dataset,perm=50)
 
 ##Report the analysis result
 result<-mlda.sig(score.obj=myscore,dataset,pvalue=0.05,loci.ID=rownames(dataset$R))
 
-##Check the iterestig loci on the plot of log likeihood ratios
+##Check the interestig loci on the plot of log likelihood ratios
 lr.plot(dataset,mlda.result,mytest,loci=c("119_A_6","66_G_6"),legend=TRUE)
 
 ##Visualise the analysis result

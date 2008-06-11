@@ -21,8 +21,8 @@ mlda.sig(score.obj, dataset, loci.ID = NULL, pvalue = 0.01, filter = TRUE)
 \value{
   A list containing:
   
-  \item{loci.up }{hypermethylated loci in class 2,sensitive and resistant scores}
-  \item{loci.down }{hypomethylated loci in class 2,sensitive and resistnat scores}
+  \item{loci.up }{hypermethylated loci in class 2, sensitive and resistant scores}
+  \item{loci.down }{hypomethylated loci in class 2, sensitive and resistnat scores}
   \item{pos.p }{p value for positive outlier}
   \item{neg.p }{p value for negative outlier}
 }

@@ -17,7 +17,7 @@ mlda(dataset, trim = 0.05, norm = TRUE)
 \details{
 
   Three linear models were constructed in this function. 
-  One is the unmethylation model constructed using 94 mitochondrial sequences. 
+  One is the unmethylation model constructed using mitochondrial sequences or other unmethylated controls. 
   One is the intermediate model used to select the loci that can be used as the methylated reference. 
   The other one is the methylation model constructed using the loci identified by the intermediate model. 
   We estimated the distance of each locus to the methylated and unmethylated lines using standardised 
@@ -38,8 +38,8 @@ mlda(dataset, trim = 0.05, norm = TRUE)
 
 \examples{
 	
-		data(hcgi12k)
-		mlda.result<-mlda(hcgi12k,norm=FALSE,trim=0.05)
+data(hcgi12k)
+mlda.result<-mlda(hcgi12k,norm=FALSE,trim=0.05)
 
 }
 

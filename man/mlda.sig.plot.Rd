@@ -6,7 +6,8 @@
   A function to report the analysis result from MLDA.
 }
 \usage{
-mlda.sig.plot(score.obj, pvalue = 0.05, control1 = NULL, control2 = NULL, control3 = NULL)
+mlda.sig.plot(score.obj, pvalue = 0.05, control1 = NULL, 
+							control2 = NULL, control3 = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
