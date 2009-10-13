@@ -42,4 +42,3 @@ data(hcgi12k)
 mlda.result<-mlda(hcgi12k,norm=FALSE,trim=0.05)
 
 }
-

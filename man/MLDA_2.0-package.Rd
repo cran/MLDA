@@ -1,5 +1,5 @@
-\name{MLDA-package}
-\alias{MLDA-package}
+\name{MLDA_2.0-package}
+\alias{MLDA_2.0-package}
 \alias{MLDA}
 \docType{package}
 \title{
@@ -25,10 +25,10 @@ Methylation Linear Discriminant Analysis (MLDA)
 \tabular{ll}{
 Package: \tab MLDA\cr
 Type: \tab Package\cr
-Version: \tab 1.0-1\cr
-Date: \tab 2008-06-11\cr
+Version: \tab 2.0\cr
+Date: \tab 2009-10-13\cr
 License: \tab GPL (>= 2) \cr
-Depends: \tab R (>= 2.7.0)\cr
+Depends: \tab R (>= 2.9.2)\cr
 LazyLoad: \tab yes\cr
 }
 
@@ -76,3 +76,4 @@ lr.plot(dataset,mlda.result,mytest,loci=c("119_A_6","66_G_6"),legend=TRUE)
 ##Visualise the analysis result
 mlda.sig.plot(myscore,control1=dataset$mito.flag)
 }
+

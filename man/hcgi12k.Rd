@@ -9,6 +9,7 @@
 \usage{data(hcgi12k)}
 \format{
   The format is:
+\itemize{
 
  \item{R}{A matrix of log-transformed signal intensities for red channel}
  \item{G}{A matrix of log-transformed signal intensities for green channel}
@@ -19,6 +20,7 @@
  \item{sample.names}{A vector of sample names}
  \item{flag}{A matrix of flag of low quality probes. The low quality probes are flagged as -50, otherwise are flagged as 0}
  \item{flagds}{A matrix of flag of low quality probes on dye-swapped arrays. The low quality probes are flagged as -50, otherwise are flagged as 0}
+}
 }
 
 \source{

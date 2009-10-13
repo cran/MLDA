@@ -5,4 +5,3 @@
 \description{
   An internal function to construct the intermediate linear model
 }
-
